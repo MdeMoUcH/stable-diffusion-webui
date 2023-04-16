@@ -5,6 +5,7 @@
 
 # Install directory without trailing slash
 #install_dir="/home/$(whoami)"
+install_dir="/data/stable-diffusion"
 
 # Name of the subdirectory
 #clone_dir="stable-diffusion-webui"
@@ -14,6 +15,7 @@
 
 # python3 executable
 #python_cmd="python3"
+python_cmd="python3.10"
 
 # git executable
 #export GIT="git"
@@ -26,6 +28,14 @@
 
 # install command for torch
 #export TORCH_COMMAND="pip install torch==1.12.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113"
+#export TORCH_COMMAND="pip install torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116"
+#export TORCH_COMMAND="pip install torch --pre --extra-index-url https://download.pytorch.org/whl/nightly/cu117"
+#
+export TORCH_COMMAND="pip install torch==1.13.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117"
+#export TORCH_COMMAND="pip install torch==1.13.1+cu117"
+#export TORCH_COMMAND="pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117/torch-1.13.1%2Bcu117-cp310-cp310-linux_x86_64.whl"
+#export TORCH_COMMAND="pip install torch==1.13.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117/torch-1.13.1%2Bcu117-cp310-cp310-linux_x86_64.whl"
+#export TORCH_COMMAND="pip install torch==1.13.1+cu117"
 
 # Requirements file to use for stable-diffusion-webui
 #export REQS_FILE="requirements_versions.txt"
@@ -33,6 +43,7 @@
 # Fixed git repos
 #export K_DIFFUSION_PACKAGE=""
 #export GFPGAN_PACKAGE=""
+export GFPGAN_PACKAGE="git+https://github.com/TencentARC/GFPGAN.git"
 
 # Fixed git commits
 #export STABLE_DIFFUSION_COMMIT_HASH=""
@@ -43,4 +54,9 @@
 # Uncomment to enable accelerated launch
 #export ACCELERATE="True"
 
+
+
+export COMMANDLINE_ARGS="--medvram --disable-nan-check --xformers" 
+#Para reinstalar torch:  --reinstall-torch
+# --no-half-vae --xformers  --reinstall-torch --reinstall-xformers 
 ###########################################
