@@ -13,7 +13,7 @@ sudo apt-get install build-essential wget curl git python3 python3-venv \
 	
 #descargar python 10
 wget https://www.python.org/ftp/python/3.10.9/Python-3.10.9.tgz
-tar-xvzf Python-3.10.9.tgz
+tar -xvzf Python-3.10.9.tgz
 cd Python-3.10.9
 ./configure --enable-optimizations
 make
