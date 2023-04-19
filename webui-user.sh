@@ -31,7 +31,7 @@ python_cmd="python3.10"
 #export TORCH_COMMAND="pip install torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116"
 #export TORCH_COMMAND="pip install torch --pre --extra-index-url https://download.pytorch.org/whl/nightly/cu117"
 #
-export TORCH_COMMAND="pip install torch==1.13.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117"
+export TORCH_COMMAND="pip install torch==1.13.1+cu117 torchvision --extra-index-url https://download.pytorch.org/whl/cu117"
 #export TORCH_COMMAND="pip install torch==1.13.1+cu117"
 #export TORCH_COMMAND="pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117/torch-1.13.1%2Bcu117-cp310-cp310-linux_x86_64.whl"
 #export TORCH_COMMAND="pip install torch==1.13.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117/torch-1.13.1%2Bcu117-cp310-cp310-linux_x86_64.whl"
@@ -53,6 +53,12 @@ export GFPGAN_PACKAGE="git+https://github.com/TencentARC/GFPGAN.git"
 
 # Uncomment to enable accelerated launch
 #export ACCELERATE="True"
+
+#Para especificar la versión de xformers:
+#export XFORMERS_PACKAGE="xformers==0.0.17"
+
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64_linux-gnu/
 
 
 
